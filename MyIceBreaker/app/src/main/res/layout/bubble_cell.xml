@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutBubbleCell"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="2dp">
+
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgBubblePointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+        android:background="@drawable/bubble_pointer_other_side_user"
+android:layout_alignBottom="@+id/textMsgContent"
+
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textMsgContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bubble_other_side_user_single_or_first"
+        android:text="sasasasasasasasasasasasasasasasasasasasasasasasasasasasasa?"
+android:layout_toRightOf="@+id/imgBubblePointer"
+        android:textColor="#ffffff"
+
+        android:textSize="16sp"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textSendingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textMsgContent"
+        android:text="15:36"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#9f9da1"
+        android:visibility="visible" />
+
+</RelativeLayout>

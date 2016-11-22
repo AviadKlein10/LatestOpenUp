@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyIceBreaker</string>
+    <string name="facebook_app_id">533892666795013</string>
+    <string name="action_settings">action_setting</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="user_preferences">העדפות משתמש</string>
+    <string name="terms_of_use">תנאי שימוש</string>
+    <string name="contact_us">צור קשר</string>
+    <string name="questions_and_answers">שאלות ותשובות</string>
+    <string name="share">שתף</string>
+    <string name="server_ip">http://79.183.12.183:8082</string>
+
+</resources>

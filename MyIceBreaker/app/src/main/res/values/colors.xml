@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#2d2343</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="facebookBlue">#567fc8</color>
+    <color name="facebookBluePressed">#657591</color>
+
+
+    <color name="chatActionBar">#35294e</color>
+    <color name="secondPrimaryColor">#ff635d</color>
+
+
+
+
+</resources>

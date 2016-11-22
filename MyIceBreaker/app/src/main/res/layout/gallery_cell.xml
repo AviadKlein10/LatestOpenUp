@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:layout_height="40dp"
+            app:srcCompat="@android:drawable/screen_background_dark"
+            android:id="@+id/mainGalleryPhoto"
+            android:layout_width="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtGalleryPhotosCount"
+            android:text="photos count"
+            android:layout_marginBottom="4dp"
+            android:layout_alignBottom="@+id/mainGalleryPhoto"
+            android:layout_alignEnd="@+id/txtAlbumTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album Title"
+            android:id="@+id/txtAlbumTitle"
+            android:layout_marginEnd="13dp"
+            android:layout_above="@+id/photosCount"
+            android:layout_toStartOf="@+id/mainGalleryPhoto"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:weightSum="1"
+            android:layout_weight="0.05">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="18dp"
+                android:id="@+id/imgArrowDirection"
+                android:src="@drawable/arrow_in_message" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.16"
+            android:gravity="center|left">
+
+            <ImageView
+                android:layout_height="55sp"
+                android:layout_width="55sp"
+                android:id="@+id/imgProfileCellPic"
+                android:src="@drawable/oren"
+                android:scaleType="fitCenter"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentLeft="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/notification_counter"
+                android:layout_alignTop="@+id/imgProfileCellPic"
+                android:layout_alignEnd="@+id/imgProfileCellPic"
+                android:text="3"
+                android:textColor="#ffffff"
+                android:id="@+id/txtNotificationMsgCounter"
+                android:gravity="center"
+   />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.59">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="סיוון 26"
+                android:id="@+id/txtNameAndAgeCell"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="5dp"
+                android:textStyle="bold"
+                android:layout_marginTop="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="טקסט של ההודעה האחרונה"
+                android:id="@+id/txtLastMessageCell"
+                android:layout_gravity="bottom"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentEnd="false"
+                android:layout_below="@+id/txtNameAndAgeCell"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:paddingBottom="5dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

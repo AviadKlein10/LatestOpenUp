@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "108161993778",
+    "firebase_url": "https://myicebreaker-2124a.firebaseio.com",
+    "project_id": "myicebreaker-2124a",
+    "storage_bucket": "myicebreaker-2124a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108161993778:android:f40e0fa71a13fd6e",
+        "android_client_info": {
+          "package_name": "aviv.myicebreaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108161993778-912r4t1f374k77r1uueeguiuakva5d1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRir6Pz-vyO2Col_mVfvz-Y6z8-hT1KBs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

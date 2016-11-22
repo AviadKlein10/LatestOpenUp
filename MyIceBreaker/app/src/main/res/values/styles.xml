@@ -1,0 +1,101 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="MyNoActionBar">
+        <!-- Both of these are needed -->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <style name="ActionBar">
+        <item name="android:titleTextStyle">@style/ActionBar.Title</item>
+    </style>
+
+////////////////////////////////////
+
+    <style name="CustomActionBarTheme" parent="@style/Theme.AppCompat">
+
+
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+        <item name="dropDownListViewStyle">@style/PopupMenuListView</item>
+
+        <item name="actionBarDivider">@null</item>
+
+        <!--<item name="android:fontFamily">@android:"a</item>
+        <item name="android:typeface"></item>-->
+
+
+        <!-- Change Status Bar Color works only on KitKat and above -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <item name="android:homeAsUpIndicator">@drawable/ic_drawer</item>
+        <item name="homeAsUpIndicator">@drawable/ic_drawer</item>
+
+        <!-- OverFlow Menu Text Color -->
+        <item name="android:textColor">#FF0000</item>
+
+    </style>
+
+    <!-- Set Custom Icon for Overflow Button in ActionBar -->
+    <style name="OverflowButton" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_overflow</item>
+    </style>
+
+    <!-- ActionBar styles for Text Style, Background-->
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/chatActionBar</item>
+
+
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+
+    <!-- ActionBar styles for Text Style -->
+    <style name="MyActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <!-- OverFlow menu Styles -->
+    <style name="PopupMenuListView" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:divider">#FF0000</item>
+
+        <item name="android:dividerHeight">2dp</item>
+
+        <item name="android:background">#33B5E5</item>
+    </style>
+
+    <style name="CustomFontStyle">
+        <item name="customFont">fonts/GothamRounded-Medium.otf</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="item_navigation">
+        <item name="android:textSize">16sp</item>
+        <item name="android:direction">left_to_right</item>
+        <item name="android:layout_alignLeft">@id/nav_view</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textDirection">firstStrongLtr</item>
+
+    </style>
+
+    <declare-styleable name="CustomFontTxtView">
+        <attr name="customFont" format="string" />
+    </declare-styleable>
+</resources>

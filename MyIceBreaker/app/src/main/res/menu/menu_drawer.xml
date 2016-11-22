@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/userPreferences"
+            android:title="@string/user_preferences" />
+        <item
+            android:id="@+id/termsOfUse"
+            android:title="@string/terms_of_use" />
+        <item
+            android:id="@+id/contactUs"
+            android:title="@string/contact_us" />
+        <item
+            android:id="@+id/questionsAndAnswers"
+            android:title="@string/questions_and_answers" />
+        <item
+            android:id="@+id/share"
+            android:title="@string/share" />
+    </group>
+
+</menu>

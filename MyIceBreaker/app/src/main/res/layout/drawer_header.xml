@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="222dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:gravity="center"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:id="@+id/drawerImgUser"
+    android:src="@drawable/oren"
+    android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:src="#0000dd44"
+        android:baselineAlignBottom="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/btnChagnePic"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aviad"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/btnChagnePic"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:src="@drawable/full_camera"
+        app:layout_anchor="@id/drawerImgUser"
+        android:clickable="true"
+
+        app:fab_colorNormal="@color/secondPrimaryColor"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:background="#ffffff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="שיחות פעילות"
+            android:paddingLeft="12dp"
+            android:id="@+id/txtActiveChats"
+            android:textColor="@color/secondPrimaryColor"
+            android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.92">
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/listViewActiveChats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:divider="#e3e3e3"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fabNewMatch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/combined_shape"
+
+        app:fab_elevationCompat="4dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="88dp" />
+</RelativeLayout>
+
+</LinearLayout>

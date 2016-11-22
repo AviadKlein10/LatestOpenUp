@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur_bgn"
+    android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.09"
+        android:background="@color/chatActionBar"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:weightSum="0.14">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btnDrawer"
+                android:src="@drawable/back"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:layout_weight="1.50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:weightSum="0.14">
+
+            <TextView
+                android:text="בחר תמונה"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:gravity="left|center_vertical"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.16">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imgGalleryPhoneCover"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="10dp" />
+
+
+        <TextView
+            android:text="גלריה"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/txtGallery"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imgGalleryPhoneCover" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.16">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imgFacebookGalleryCover"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="10dp" />
+
+
+        <TextView
+            android:text="פייסבוק"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/txtFacebookGallery"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imgFacebookGalleryCover" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.16">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imgSelfCamera"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="צלם עצמך"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/txtSelfPicture"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imgSelfCamera" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.44"></LinearLayout>
+
+</LinearLayout>

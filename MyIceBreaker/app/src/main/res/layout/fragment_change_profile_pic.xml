@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.09"
+        android:background="@color/chatActionBar"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:weightSum="0.14">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btnDrawer"
+                android:src="@drawable/menu"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:layout_weight="1.50" />
+        </LinearLayout>
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85">
+
+        <ImageView
+            android:layout_width="145dp"
+            android:layout_height="125dp"
+            android:id="@+id/profilePicLeft"
+            android:scaleType="centerCrop"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/profilePicTop"
+            android:layout_marginBottom="67dp"
+            android:src="@drawable/oren" />
+
+        <ImageView
+            android:layout_width="145dp"
+            android:layout_height="125dp"
+            android:id="@+id/profilePicRight"
+            android:scaleType="centerCrop"
+            android:layout_alignTop="@+id/profilePicLeft"
+            android:layout_alignEnd="@+id/profilePicTop"
+            android:src="@drawable/oren" />
+
+        <ImageView
+            android:layout_width="310dp"
+            android:layout_height="265dp"
+            android:id="@+id/profilePicTop"
+            android:src="@drawable/oren"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_add_pic"
+            android:id="@+id/btnImgReplace"
+            android:layout_marginEnd="8dp"
+            android:layout_alignBottom="@+id/profilePicTop"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="65dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

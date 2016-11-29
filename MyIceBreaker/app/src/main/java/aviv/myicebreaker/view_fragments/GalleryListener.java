@@ -9,5 +9,6 @@ import aviv.myicebreaker.network.BaseListener;
  */
 public interface GalleryListener extends BaseListener{
     void uploadChosenImage(String userId, int imageIndexInArray, File imageFile);
-    void initFacebookGalleryFragment();
+    void initFacebookGalleryActivity(int imageOrder);
+
 }

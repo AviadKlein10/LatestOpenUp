@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="8"
+    android:viewportHeight="8"
+    android:width="8dp"
+    android:height="8dp">
+    <group
+        android:translateX="-176"
+        android:translateY="-1089">
+        <path
+            android:pathData="M184 1089.8057L183.19429 1089 180 1092.1943 176.80571 1089 176 1089.8057 179.19429 1093 176 1096.1943 176.80571 1097 180 1093.8057 183.19429 1097 184 1096.1943 180.80571 1093 184 1089.8057"
+            android:fillColor="#ff635d" />
+    </group>
+</vector>

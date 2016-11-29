@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import aviv.myicebreaker.Singleton;
-import aviv.myicebreaker.facebook_check.GridItem;
 import aviv.myicebreaker.module.CustomObjects.FacebookAlbumObject;
 import aviv.myicebreaker.module.CustomObjects.NewUser;
 
@@ -366,16 +365,16 @@ public class FacebookConnectivity {
                         Log.i("ResponseT", response.toString());
                         try {
                             JSONArray jsonPhotos = response.getJSONObject().getJSONArray("data");
-                            GridItem item;
+                            //GridItem item;
 
                             /**Parse json array, search for "name" and "id"**/
 
                             for (int j = 0; j < jsonPhotos.length(); j++) {
-                                item = new GridItem();
+                             //   item = new GridItem();
                                 JSONObject jsonFBPhoto = jsonPhotos.getJSONObject(j);
 
                                 /**If image has no description, set its title to "No Title"**/
-                                item.setTitle("No Title");
+                          //      item.setTitle("No Title");
 
                                 /**find "id" which identifies the image**/
                                 String id = jsonFBPhoto.getString("id");
@@ -383,7 +382,7 @@ public class FacebookConnectivity {
                                 String url = image_url.toString();
                                 Log.d("TTT ", url);
                                 /**prepare to send "title" and "image" to the adapter**/
-                                item.setImage(url);
+                              //  item.setImage(url);
 
                                 /**Image and Title are sent to the adapter**/
                                 //   gallery_items.add(item);

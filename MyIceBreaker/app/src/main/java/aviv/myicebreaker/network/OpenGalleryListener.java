@@ -5,5 +5,6 @@ package aviv.myicebreaker.network;
  */
 
 public interface OpenGalleryListener extends BaseListener {
-    void onOpenGalleryClicked();
+    void onOpenGalleryClicked(int imageOrder);
+    void onBackPressedFromChangeProfilePic();
 }

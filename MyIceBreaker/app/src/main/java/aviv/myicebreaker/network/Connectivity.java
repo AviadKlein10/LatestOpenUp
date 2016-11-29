@@ -421,12 +421,12 @@ public class Connectivity {
                 });
     }
 
-    public void uploadImageToServer(String userId, String imageIndexInArray, File imageFile) {
+    public void uploadImageToServer(String userId, final int imageIndexInArray, File imageFile) {
 
         Ion.with(context)
                 .load("POST", serverIp + "/api/user/uploadImage")
                 .setMultipartParameter("userId", "57b726b26470e2cb10896ac1")
-                .setMultipartParameter("imgOrder", imageIndexInArray)
+                .setMultipartParameter("imgOrder", String.valueOf(imageIndexInArray))
                 .setMultipartFile("imgFile", imageFile)
                 .asJsonObject()
                 .setCallback(new FutureCallback<JsonObject>() {
@@ -434,6 +434,9 @@ public class Connectivity {
                     public void onCompleted(Exception e, JsonObject result) {
                         Log.d("ImageResult", result + "");
                         Log.d("ImageException", e + "");
+                        String url =  result.get("url").getAsString();
+                        Log.d("urlurl",url);
+                     //   Singleton.getInstance().getNewUser().setUploadedImageUrl(url,imageIndexInArray);
                     }
                 });
 

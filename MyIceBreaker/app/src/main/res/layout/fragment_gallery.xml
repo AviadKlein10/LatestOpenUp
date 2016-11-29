@@ -106,14 +106,15 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/icon_self_capture"
             android:id="@+id/imgSelfCamera"
             android:layout_weight="1"
             android:paddingRight="10dp"
             android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:background="#ffffff" />
 
         <TextView
             android:text="צלם עצמך"

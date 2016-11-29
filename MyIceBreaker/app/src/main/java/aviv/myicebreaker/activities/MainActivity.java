@@ -40,10 +40,8 @@ import aviv.myicebreaker.network.ResponseObject;
 import aviv.myicebreaker.network.SearchBtnListener;
 import aviv.myicebreaker.view_fragments.FragmentChangeProfilePic;
 import aviv.myicebreaker.view_fragments.FragmentChats;
-import aviv.myicebreaker.view_fragments.FragmentFacebookGallery;
 import aviv.myicebreaker.view_fragments.FragmentGalleries;
 import aviv.myicebreaker.view_fragments.FragmentPersonalPreferences;
-
 import aviv.myicebreaker.view_fragments.FragmentSomeText;
 import aviv.myicebreaker.view_fragments.GalleryListener;
 
@@ -73,22 +71,42 @@ public class MainActivity extends AppCompatActivity implements DrawerListener, L
                 Log.d("wtff", " " + localUser.getFirstName());
             }
         });
+
         setContentView(R.layout.main_activity);
         initActionBar();
         initDrawerNavigation();
 
         connectivity = new Connectivity(this);
        Log.d("Splash? ",SplashActivity.TAG);
+initFragmentChats();
+        Intent intent = getIntent();
+        Bundle bd = intent.getExtras();
+        String extrasFromIntent = (String)bd.get("name");
+        String extrasFromIntentImage = (String)bd.get("imageUrl");
+        if (extrasFromIntentImage!=null){
+            fragmentChangeProfilePic= new FragmentChangeProfilePic();
+            fragmentChangeProfilePic.setUrlNewImage(extrasFromIntentImage);  // TODO what TODO?
+        }
+        if(extrasFromIntent!=null) {
+            if(extrasFromIntent.equals("ty")){
+                Log.d("maybe","yes");
 
-        fragmentChats = new FragmentChats();
+               // FragmentChangeProfilePic fragmentChangeProfilePic= new FragmentChangeProfilePic();
+                replaceFragment(fragmentChangeProfilePic);
 
-        if (findViewById(R.id.fragmentContainer) != null) {
-
-            if (savedInstanceState != null) {
-                return;
             }
-            Log.d("initFragment", " Chats");
-            initFragmentChats();
+        }else {
+
+            fragmentChats = new FragmentChats();
+
+            if (findViewById(R.id.fragmentContainer) != null) {
+
+                if (savedInstanceState != null) {
+                    return;
+                }
+                Log.d("initFragment", " Chats");
+                initFragmentChats();
+            }
         }
 
         /*Intent intent = getIntent();
@@ -190,13 +208,10 @@ public class MainActivity extends AppCompatActivity implements DrawerListener, L
 
 
     private void initFragmentChats() {
-        Log.d("initFragment", " Chats");
 
-
+        fragmentChats = new FragmentChats();
         fragmentChats.setArguments(getIntent().getExtras());
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragmentContainer, fragmentChats).commit();
+replaceFragment(fragmentChats);
     }
 
     @Override
@@ -224,12 +239,14 @@ public class MainActivity extends AppCompatActivity implements DrawerListener, L
 
     @Override
     public void onBackPressed() {
+        Log.d("backpressed","sss");
         if (mDrawerLayout != null && mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
             initFragmentChats();
-            super.onBackPressed();
+           // super.onBackPressed();
         }
+
     }
 
     @Override
@@ -243,8 +260,6 @@ public class MainActivity extends AppCompatActivity implements DrawerListener, L
 
     @Override
     public void createActivityPrivateChat() {
-
-
         Intent mainIntent = new Intent(getApplicationContext(), ActivityPrivateChat.class);
         mainIntent.putExtra("Hello", "fck");
         startActivity(mainIntent);
@@ -262,23 +277,60 @@ public class MainActivity extends AppCompatActivity implements DrawerListener, L
     }
 
     @Override
-    public void onOpenGalleryClicked() {
+    public void onOpenGalleryClicked(int imageOrder) {
         FragmentGalleries fragmentGalleries = new FragmentGalleries();
+        fragmentGalleries.setChosenImageOrder(imageOrder);
         replaceFragment(fragmentGalleries);
     }
 
     @Override
-    public void uploadChosenImage(String userId, int imageIndexInArray, File imageFile) {
-        connectivity.uploadImageToServer(userId,String.valueOf(imageIndexInArray),imageFile);
+    public void onBackPressedFromChangeProfilePic() {
+        replaceFragment(fragmentChats);
     }
 
     @Override
-    public void initFacebookGalleryFragment() {
-        FragmentFacebookGallery fragmentFacebookGallery = new FragmentFacebookGallery();
-        replaceFragment(fragmentFacebookGallery);
+    public void uploadChosenImage(String userId, int imageIndexInArray, File imageFile) {
+      //  connectivity.uploadImageToServer(userId,imageIndexInArray,imageFile);
+        fragmentChangeProfilePic.setFileNewImage(imageFile);
+        fragmentChangeProfilePic.setImageOrder(imageIndexInArray);
+        replaceFragment(fragmentChangeProfilePic);
+
     }
-    private void replaceFragment(Fragment nextFragment){
+
+    @Override
+    public void initFacebookGalleryActivity(int imageOrder) {
+        Intent mainIntent = new Intent(getApplicationContext(), ActivityFacebookGallery.class);
+        mainIntent.putExtra("imageUrl",imageOrder);
+        startActivity(mainIntent);
+        finish();
+    }
+
+
+    public void replaceFragment(Fragment nextFragment){
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fragmentContainer, nextFragment).commit();
     }
+
+   /* @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.d("onActivity",requestCode +"pop");
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode) {
+        super.startActivityForResult(intent, requestCode);
+        Log.d("onActivity",requestCode +"pop");
+        if(requestCode ==1) {
+    new Handler().postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            FragmentChangeProfilePic fragmentChangeProfilePic = new FragmentChangeProfilePic();
+            replaceFragment(fragmentChangeProfilePic);
+
+        }
+    }, 1000);
+}
+    }*/
+
 }

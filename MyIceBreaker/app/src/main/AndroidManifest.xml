@@ -44,6 +44,11 @@
             android:windowSoftInputMode="adjustPan|stateHidden"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".activities.ActivityFacebookGallery"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <service
             android:name="aviv.myicebreaker.MyFirebaseMessagingService">
             <intent-filter>

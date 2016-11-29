@@ -68,7 +68,8 @@ public class ActivityPrivateChat extends AppCompatActivity implements View.OnCli
 
     {
         try {
-            mSocket = IO.socket("http://79.183.12.183:8082/");
+           // String serverIp =  this.getResources().getString(R.string.server_ip);
+            mSocket = IO.socket("http://79.181.138.231:8082/");
         } catch (URISyntaxException e) {
             Log.e("exception socket", e + "");
         }

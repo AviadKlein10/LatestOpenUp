@@ -15,7 +15,7 @@ public class FragmentPersonalPreferences extends android.support.v4.app.Fragment
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.long_screen, container, false);
+        final View view = inflater.inflate(R.layout.fragment_user_preferences, container, false);
         return view;
 
     }

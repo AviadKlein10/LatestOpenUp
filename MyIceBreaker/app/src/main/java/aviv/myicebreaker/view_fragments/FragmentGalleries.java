@@ -22,8 +22,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.bumptech.glide.Glide;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -46,6 +44,11 @@ public class FragmentGalleries extends Fragment implements View.OnClickListener 
     private ListView galleryListView;
     private ImageView imgFacebookGalleryCover,imgGalleryPhoneCover,imgSelfCamera;
     private GalleryListener galleryListener;
+    private int imageOrder;
+
+    public void setChosenImageOrder(int imageOrder) {
+        this.imageOrder = imageOrder;
+    }
 
     @Nullable
     @Override
@@ -73,6 +76,7 @@ public class FragmentGalleries extends Fragment implements View.OnClickListener 
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.d("requestCode", requestCode + " ");
@@ -95,9 +99,8 @@ public class FragmentGalleries extends Fragment implements View.OnClickListener 
 
                 File file = new File(strPath);
                 file = resizeFile(file, strPath);
-
-                galleryListener.uploadChosenImage(Singleton.getInstance().getNewUser().getId(), 2, file);
-                Glide.with(this).load(file).into(imgSelfCamera);
+                Singleton.getInstance().getNewUser().setUploadedImageUrl(strPath,imageOrder);// TODO need number
+                galleryListener.uploadChosenImage(Singleton.getInstance().getNewUser().getId(), imageOrder, file);
 
             }
 
@@ -240,7 +243,7 @@ public class FragmentGalleries extends Fragment implements View.OnClickListener 
 
             srcFile.createNewFile();
             FileOutputStream outputStream = new FileOutputStream(srcFile);
-            selectedBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);//TODO check quality
+            selectedBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);//TODO check quality
 
 
             return srcFile;
@@ -257,7 +260,7 @@ public class FragmentGalleries extends Fragment implements View.OnClickListener 
                 initPhoneGallery();
                 break;
             case R.id.imgFacebookGalleryCover:
-                initPhoneGallery();
+                galleryListener.initFacebookGalleryActivity(imageOrder);
                 break;
             case R.id.imgSelfCamera:
                 takePictureIntent();

@@ -9,6 +9,6 @@
     <string name="contact_us">צור קשר</string>
     <string name="questions_and_answers">שאלות ותשובות</string>
     <string name="share">שתף</string>
-    <string name="server_ip">http://79.183.12.183:8082</string>
+    <string name="server_ip">http://79.181.138.231:8082</string>
 
 </resources>

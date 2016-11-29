@@ -19,8 +19,8 @@
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/btnDrawer"
-                android:src="@drawable/menu"
+                android:id="@+id/btnBackFromChangeProfilePic"
+                android:src="@drawable/back"
                 android:background="@android:color/transparent"
                 android:layout_gravity="center"
                 android:layout_weight="1.50" />
@@ -32,7 +32,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.85">
 
-        <ImageView
+        <aviv.myicebreaker.module.CustomObjects.CustomImageView
             android:layout_width="145dp"
             android:layout_height="125dp"
             android:id="@+id/profilePicLeft"
@@ -43,7 +43,8 @@
             android:layout_marginBottom="67dp"
             android:src="@drawable/oren" />
 
-        <ImageView
+        <aviv.myicebreaker.module.CustomObjects.CustomImageView
+
             android:layout_width="145dp"
             android:layout_height="125dp"
             android:id="@+id/profilePicRight"
@@ -52,7 +53,7 @@
             android:layout_alignEnd="@+id/profilePicTop"
             android:src="@drawable/oren" />
 
-        <ImageView
+        <aviv.myicebreaker.module.CustomObjects.CustomImageView
             android:layout_width="310dp"
             android:layout_height="265dp"
             android:id="@+id/profilePicTop"
@@ -67,11 +68,65 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/btn_add_pic"
-            android:id="@+id/btnImgReplace"
-            android:layout_marginEnd="8dp"
-            android:layout_alignBottom="@+id/profilePicTop"
+            android:id="@+id/btnTopImgReplace"
+            android:text="1"
+            android:textColor="@color/transparent"
+            android:layout_marginEnd="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_alignTop="@+id/profilePicTop"
             android:layout_alignParentEnd="true"
-            android:layout_marginBottom="65dp" />
+            android:contentDescription="0" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_add_pic"
+            android:id="@+id/btnRightImgReplace"
+            android:textColor="@color/transparent"
+            android:layout_alignTop="@+id/profilePicRight"
+            android:layout_alignStart="@+id/btnTopImgReplace"
+            android:contentDescription="2" />
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_add_pic"
+            android:id="@+id/btnLeftImageReplace"
+            android:textColor="@color/transparent"
+            android:layout_alignTop="@+id/profilePicLeft"
+            android:layout_toStartOf="@+id/profilePicRight"
+            android:contentDescription="1"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/favorite_image_filled"
+            android:textColor="@color/transparent"
+            android:layout_marginTop="53dp"
+            android:layout_alignTop="@+id/btnTopImgReplace"
+            android:layout_alignStart="@+id/btnTopImgReplace"
+            android:id="@+id/btnFavoriteImage" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/favorite_image_unfilled"
+            android:id="@+id/btnMakeLeftImageFavorite"
+            android:textColor="@color/transparent"
+            android:layout_below="@+id/btnLeftImageReplace"
+            android:layout_alignStart="@+id/btnLeftImageReplace"
+            android:contentDescription="2"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/favorite_image_unfilled"
+            android:textColor="@color/transparent"
+            android:contentDescription="3"
+            android:layout_below="@+id/btnRightImgReplace"
+            android:layout_alignStart="@+id/btnRightImgReplace"
+            android:id="@+id/btnMakeRightImageFavorite" />
     </RelativeLayout>
 
 

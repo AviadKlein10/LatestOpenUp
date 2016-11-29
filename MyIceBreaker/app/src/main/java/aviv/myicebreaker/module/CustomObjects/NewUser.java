@@ -1,5 +1,7 @@
 package aviv.myicebreaker.module.CustomObjects;
 
+import android.util.Log;
+
 /**
  * Created by Aviad on 11/08/2016.
  */
@@ -97,5 +99,12 @@ public class NewUser {
 
     public void setFCMToken(String FCMToken) {
         this.FCMToken = FCMToken;
+    }
+
+    public void setUploadedImageUrl(String uploadedImageUrl, int indexInArray){
+        imageUrl[indexInArray] = uploadedImageUrl;
+        Log.d("imageUrlL 1 ",imageUrl[0]);
+        Log.d("imageUrlL 2 ",imageUrl[1]);
+        Log.d("imageUrlL 3 ",imageUrl[2]);
     }
 }

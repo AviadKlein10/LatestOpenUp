@@ -9,7 +9,6 @@ import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.BuildConfig;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -85,8 +84,8 @@ public class SplashActivity extends AppCompatActivity implements SplashDoneDownl
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                newFBarray =facebookConnectivity.getAllFacebookAlbumsInfo();
-dataReceived();            //  facebookConnectivity.getAllFacebookAlbumsInfo();
+               // newFBarray =facebookConnectivity.getAllFacebookAlbumsInfo();
+//dataReceived();            //  facebookConnectivity.getAllFacebookAlbumsInfo();
               /*  new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -98,7 +97,7 @@ dataReceived();            //  facebookConnectivity.getAllFacebookAlbumsInfo();
         buttonUserDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                facebookConnectivity.facebookTry();
+              //  facebookConnectivity.facebookTry();
                if(globalLocalUser !=null) {
                    Log.d(getClass().getSimpleName(), "User Ok " + globalLocalUser.getProfileImageUrl());
                    Log.d("final check", Singleton.getInstance().getNewUser().getImageUrl()[0]);
@@ -308,7 +307,7 @@ dataReceived();            //  facebookConnectivity.getAllFacebookAlbumsInfo();
         //TODO With This
     }
 
-    private void dataReceived (){
+    /*private void dataReceived (){
 
         Log.d("size dize", newFBarray+"");
         if(newFBarray.size()==0){
@@ -321,5 +320,5 @@ dataReceived();            //  facebookConnectivity.getAllFacebookAlbumsInfo();
         }else{
             Log.d("final complete " , newFBarray.get(4).getAlbumName());
         }
-    }
+    }*/
 }
